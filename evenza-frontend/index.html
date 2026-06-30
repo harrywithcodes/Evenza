@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Evenza - Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h1>Evenza</h1>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Upcoming Events</h2>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search events...">
+    <button onclick="searchEvents()">Search</button>
+</div>
+
+  <div id="eventList" class="event-grid"></div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    loadEvents();
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Evenza - Register</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <h1>Evenza</h1>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Register for an Event</h2>
+
+    <form id="registerForm">
+        <label>User ID</label>
+        <input type="number" id="userId" required>
+
+        <label>Event ID</label>
+        <input type="number" id="eventId" required>
+
+        <label>Email</label>
+       <input type="email" id="userEmail" required>
+
+        <button type="submit">Register</button>
+    </form>
+<p id="message"></p>
+ <button id="payNowBtn" onclick="payNow()" style="display:none;">Pay Now (₹500)</button> 
+</div>
+
+<script src="script.js"></script>
+<script>
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        registerForEvent();
+    });
+</script>
+</body>
+</html>

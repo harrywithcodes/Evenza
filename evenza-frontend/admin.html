@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Evenza - Admin</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <h1>Evenza</h1>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="admin.html">Admin</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Create New Event</h2>
+
+    <form id="eventForm">
+        <label>Title</label>
+        <input type="text" id="title" required>
+
+        <label>Description</label>
+        <input type="text" id="description" required>
+
+        <label>Date</label>
+        <input type="date" id="date" required>
+
+        <label>Venue</label>
+        <input type="text" id="venue" required>
+
+        <label>Capacity</label>
+        <input type="number" id="capacity" required>
+
+        <label>Price</label>
+        <input type="number" id="price" required>
+
+        <button type="submit">Create Event</button>
+    </form>
+
+    <p id="message"></p>
+
+    <h2>All Events</h2>
+    <div id="adminEventList" class="event-grid"></div>
+</div>
+
+<h2>Dashboard</h2>
+
+<div class="stats-grid">
+
+    <div class="stat-card">
+        <h3 id="eventCount">0</h3>
+        <p>Total Events</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="registrationCount">0</h3>
+        <p>Total Registrations</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="paymentCount">0</h3>
+        <p>Total Payments</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="notificationCount">0</h3>
+        <p>Total Notifications</p>
+    </div>
+
+</div>
+
+<canvas id="statsChart" width="400" height="200"></canvas>
+
+
+<script src="script.js"></script>
+<script>
+    document.getElementById("eventForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        createEvent();
+    });
+    loadAdminEvents();
+    loadDashboard();
+</script>
+</body>
+</html>
