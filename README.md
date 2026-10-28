@@ -142,17 +142,6 @@ application.properties files (which contain DB credentials and other secrets) ar
 
 
 
-\---
-
-
-
-\## License
-
-
-
-This project is private and intended for personal/portfolio use.
-
-
 
 \---
 
